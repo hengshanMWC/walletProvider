@@ -1,12 +1,10 @@
 {
   "rootPackage": true,
-  "mode": "sync",
+  "mode": "diff",
   "version": {
-    "mode": "sync",
     "message": "chore: version"
   },
   "publish": {
-    "mode": "sync",
     "tag": ""
   }
 }
