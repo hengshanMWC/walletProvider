@@ -34,9 +34,8 @@ const esbuildPlugin = esbuild({
   minify: true,
 })
 
-type Builds = Partial<Record<InternalModuleFormat, RollupOptions>>
 // rollup 配置
-const builds: Builds = {
+const _builds: Builds = {
   es: {
     input: 'index.ts',
     output: {
@@ -57,7 +56,7 @@ const builds: Builds = {
   },
 }
 
-const genConfig = (key: keyof Builds): RollupOptions => {
+const genConfig = (builds: Builds, key: keyof Builds): RollupOptions => {
   const {
     input,
     output,
@@ -74,15 +73,6 @@ const genConfig = (key: keyof Builds): RollupOptions => {
   }
   return config
 }
-
-const getAllBuilds = Object.keys(builds)
-  .map(key => genConfig(key as keyof Builds))
-
-if (!fs.existsSync('dist')) {
-  fs.mkdirSync('dist')
-}
-
-build(getAllBuilds)
 
 function build(builds: RollupOptions[]) {
   let built = 0
@@ -139,4 +129,20 @@ function getSize(code: Buffer | string) {
 
 function logError(e: Error) {
   console.error(e)
+}
+
+export type Builds = Partial<Record<InternalModuleFormat, RollupOptions>>
+
+export function main(builds: Builds = _builds) {
+  const getAllBuilds = Object.keys(builds)
+    .map(key => genConfig(builds, key as keyof Builds))
+
+  if (!fs.existsSync('dist')) {
+    fs.mkdirSync('dist')
+  }
+  build(getAllBuilds)
+}
+
+export function getBuildsTemplate() {
+  return JSON.parse(JSON.stringify(_builds))
 }

@@ -8,6 +8,6 @@ export default defineConfig({
     threads: false, // process.chdir() is not supported in workers
     globals: true,
     watch: false,
-    includeSource: ['src/**/*.{js,ts}'],
+    includeSource: ['src/**/*.{ts,tsx}'],
   },
 })
