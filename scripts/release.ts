@@ -1,11 +1,11 @@
 import { execSync } from 'child_process'
 import colors from 'colors'
-import { executeCommand } from '@abmao/pkgs'
 console.log(`${colors.cyan.bold('release: start')} 🏗`);
 (async function () {
-  execSync('npm run test', { stdio: 'inherit' })
+  // 为了防止每次子包没有更新到pnpm-lock，报frozen-lockfile
+  execSync('pnpm i', { stdio: 'inherit' })
   execSync('npm run build', { stdio: 'inherit' })
-  await executeCommand('version')
-  await executeCommand('publish')
+  execSync('npm run version', { stdio: 'inherit' })
+  execSync('npm run publish', { stdio: 'inherit' })
 })()
 console.log(`${colors.cyan.bold('release: success')} 🎉🎉🎉🎉🎊`)

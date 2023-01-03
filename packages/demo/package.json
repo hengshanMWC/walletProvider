@@ -1,0 +1,14 @@
+{
+  "name": "demo",
+  "version": "0.0.1",
+  "description": "demo",
+  "author": "mawencan",
+  "license": "ISC",
+  "main": "dist/demo.umd.js",
+  "module": "dist/demo.mjs",
+  "types": "typings",
+  "scripts": {
+    "type": "tsc --emitDeclarationOnly --declarationDir typings",
+    "build": "vite build && npm run type"
+  }
+}
