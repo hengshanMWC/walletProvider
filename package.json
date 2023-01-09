@@ -15,10 +15,10 @@
     "url": "https://github.com/hengshanMWC/monorepo-template/issues"
   },
   "scripts": {
+    "release": "esno ./scripts/release",
     "build": "lerna run build",
     "version": "lerna version",
     "publish": "lerna publish",
-    "release": "esno ./scripts/release",
     "test": "lerna run test",
     "test:cov": "lerna run test:cov",
     "lint": "eslint --ext=js,ts,json,md,tsx .",
