@@ -9,6 +9,8 @@
   "types": "typings",
   "scripts": {
     "type": "tsc --emitDeclarationOnly --declarationDir typings",
-    "build": "vite build && npm run type"
+    "build": "vite build && npm run type",
+    "test": "vitest",
+    "test:cov": "vitest --coverage"
   }
 }

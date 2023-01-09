@@ -13,8 +13,8 @@
     "resolveJsonModule": true,
     "experimentalDecorators": true,
     "target": "esnext",
-    "lib": ["DOM", "ES2020"],
+    "lib": ["DOM", "ESNext"],
     "downlevelIteration": true,
-    "suppressImplicitAnyIndexErrors": true
+    "suppressImplicitAnyIndexErrors": true,
   }
 }
