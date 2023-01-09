@@ -15,6 +15,6 @@
     "target": "esnext",
     "lib": ["DOM", "ESNext"],
     "downlevelIteration": true,
-    "suppressImplicitAnyIndexErrors": true,
+    "suppressImplicitAnyIndexErrors": true
   }
 }

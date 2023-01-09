@@ -1,10 +1,19 @@
 {
   "name": "root",
   "private": true,
+  "author": "mawencan",
   "workspaces": [
     "packages/*"
   ],
   "license": "MIT",
+  "homepage": "https://github.com/hengshanMWC/monorepo-template#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hengshanMWC/monorepo-template.git"
+  },
+  "bugs": {
+    "url": "https://github.com/hengshanMWC/monorepo-template/issues"
+  },
   "scripts": {
     "build": "lerna run build",
     "version": "lerna version",
