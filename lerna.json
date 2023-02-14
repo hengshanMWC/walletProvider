@@ -8,7 +8,8 @@
   "command": {
     "version": {
       "ignoreChanges": [
-        "*.md"
+        "*.md",
+        "*.test.*"
       ],
       "message": "chore(release): publish"
     },
