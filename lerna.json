@@ -14,7 +14,7 @@
       "message": "chore(release): publish"
     },
     "publish": {
-      "npmClient": "npm",
+      "npmClient": "npm"
     }
   }
 }
