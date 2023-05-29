@@ -5,6 +5,8 @@
     "test/**/*.test.ts"
   ],
   "compilerOptions": {
+    "declaration": true,
+    "declarationDir": "typings",
     "baseUrl": ".",
     "paths": {
       "@/*": ["./src/*"]
