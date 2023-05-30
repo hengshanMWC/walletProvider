@@ -1,8 +1,8 @@
 {
   "name": "root",
   "private": true,
-  "author": "mawencan",
   "packageManager": "pnpm@8.5.1",
+  "author": "mawencan",
   "workspaces": [
     "packages/*"
   ],
@@ -16,17 +16,20 @@
     "url": "https://github.com/hengshanMWC/monorepo-template/issues"
   },
   "scripts": {
+    "init": "pnpm i && npm run prepare",
     "release": "esno ./scripts/release",
     "build": "lerna run build",
     "version": "lerna version",
     "publish": "lerna publish",
     "test": "lerna run test",
     "test:cov": "lerna run test:cov",
+    "lint-staged": "lint-staged",
     "lint": "eslint --ext=js,ts,json,md,tsx .",
     "lint:fix": "eslint --fix --ext=js,ts,json,md,tsx .",
     "docs:dev": "vitepress dev docs",
     "docs:build": "vitepress build docs",
-    "docs:serve": "vitepress serve docs"
+    "docs:serve": "vitepress serve docs",
+    "prepare": "husky install"
   },
   "devDependencies": {
     "@antfu/eslint-config-ts": "^0.30.1",
@@ -48,5 +51,8 @@
     "vitest": "^0.26.3",
     "webpack": "^5.84.1",
     "webpack-cli": "^5.1.1"
+  },
+  "lint-staged": {
+    "**/*.{js,jsx,tsx,ts,less,md,json}": "npm run lint:fix"
   }
 }

@@ -12,7 +12,7 @@ lerna + pnpm = Monorepo，Support the following functions :package:
 ```
 git clone https://github.com/hengshanMWC/monorepo-template.git
 cd item-template
-pnpm i
+npm run init
 ```
 
 # publish test
