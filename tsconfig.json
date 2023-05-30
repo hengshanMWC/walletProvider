@@ -13,6 +13,6 @@
     "experimentalDecorators": true,
     "target": "esnext",
     "lib": ["DOM", "ESNext"],
-    "downlevelIteration": true,
+    "downlevelIteration": true
   }
 }
