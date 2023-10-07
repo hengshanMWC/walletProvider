@@ -3,14 +3,15 @@ module.exports = {
     '@antfu/eslint-config-ts',
   ],
   rules: {
-    'no-console': 'off',
-    'promise/param-names': 'off',
-    '@typescript-eslint/ban-ts-comment': 'off',
+    '@typescript-eslint/no-var-requires': 'off',
     '@typescript-eslint/no-use-before-define': 'off',
-    'curly': 'off',
-    // 希望打开的
-    'prefer-promise-reject-errors': 'off',
-    '@typescript-eslint/no-unused-vars': 'off',
+    '@typescript-eslint/no-require-imports': 'off',
+    '@typescript-eslint/ban-types': 'off',
+    'max-len': ['error', { code: 120 }],
+    'no-fallthrough': 'off',
+    'no-new-func': 0,
+    'no-console': 'off',
+    'n/prefer-global/process': 'off',
+    'jsdoc/check-alignment': 'off',
   },
 }
-

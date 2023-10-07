@@ -4,9 +4,9 @@ const pkgs = require('./package.json')
 
 const moduleName = pkgs.name
 // 检查是否是合法的 npm 包名
-if (!validateNpmPackageName(moduleName)) {
+if (!validateNpmPackageName(moduleName))
   throw new Error(`${moduleName} 不是一个合法的 npm 包名`)
-}
+
 module.exports = {
   mode: 'production',
   entry: path.resolve(__dirname, './src/index.ts'),

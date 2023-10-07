@@ -1,18 +1,18 @@
 {
-  "exclude": ["node_modules", "**/dist"],
   "compilerOptions": {
-    "module": "ESNext",
-    "moduleResolution": "node",
-    "skipLibCheck": true,
-    "esModuleInterop": true,
-    "noImplicitAny": false,
-    "noEmitOnError": true,
-    "noUnusedLocals": false,
-    "strictNullChecks": true,
-    "resolveJsonModule": true,
-    "experimentalDecorators": true,
     "target": "esnext",
     "lib": ["DOM", "ESNext"],
-    "downlevelIteration": true
-  }
+    "experimentalDecorators": true,
+    "module": "ESNext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "downlevelIteration": true,
+    "noEmitOnError": true,
+    "esModuleInterop": true,
+    "strictNullChecks": true,
+    "noImplicitAny": false,
+    "noUnusedLocals": false,
+    "skipLibCheck": true
+  },
+  "exclude": ["node_modules", "**/dist"]
 }

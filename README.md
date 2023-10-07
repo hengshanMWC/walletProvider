@@ -1,6 +1,6 @@
 # introduce
 
-lerna + pnpm = Monorepo，Support the following functions :package:
+@abmao/pkgs + pnpm = Monorepo，Support the following functions :package:
 
 - [x] webpack5 :package:
 - [x] vitest :sheep:

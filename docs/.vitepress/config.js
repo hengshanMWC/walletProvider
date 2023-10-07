@@ -1,10 +1,10 @@
 import { defineConfig } from 'vitepress'
 export default defineConfig({
-  title: 'lerna-template',
-  description: 'lerna模板',
+  title: 'pkgs-template',
+  description: 'pkgs模板',
   base: '/',
   themeConfig: {
-    siteTitle: 'lerna-template',
+    siteTitle: 'pkgs-template',
     sidebar: [
       {
         text: '介绍',
