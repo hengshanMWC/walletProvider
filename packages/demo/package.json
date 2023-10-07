@@ -4,6 +4,7 @@
   "description": "demo",
   "author": "mawencan",
   "license": "MIT",
+  "access": "public",
   "homepage": "https://github.com/hengshanMWC/monorepo-template#readme",
   "repository": {
     "type": "git",
