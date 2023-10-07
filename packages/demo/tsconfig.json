@@ -6,7 +6,7 @@
       "@/*": ["./src/*"]
     },
     "declaration": true,
-    "declarationDir": "typings"
+    "declarationDir": "./dist/types"
   },
   "include": [
     "src/index.ts"

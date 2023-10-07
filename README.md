@@ -1,7 +1,7 @@
 # introduce
 
 @abmao/pkgs + pnpm = Monorepo，Support the following functions :package:
-
+- [x] [@abmao/pkgs](https://github.com/hengshanMWC/pkgs) :card_index_dividers:
 - [x] webpack5 :package:
 - [x] vitest :sheep:
 - [x] typescript :alien:

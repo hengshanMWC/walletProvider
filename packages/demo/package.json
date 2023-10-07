@@ -13,7 +13,7 @@
     "url": "https://github.com/hengshanMWC/monorepo-template/issues"
   },
   "main": "dist/index.js",
-  "types": "typings",
+  "types": "dist/index.d.ts",
   "scripts": {
     "build": "webpack --config webpack.config.js",
     "test": "vitest",
