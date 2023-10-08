@@ -15,8 +15,14 @@
   "bugs": {
     "url": "https://github.com/hengshanMWC/monorepo-template/issues"
   },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
   "scripts": {
     "init": "pnpm i && npm run prepare",
+    "commit": "cz",
     "release": "esno ./scripts/release",
     "build": "pkgs run build",
     "test": "pkgs run test",
@@ -30,7 +36,7 @@
     "prepare": "husky install"
   },
   "devDependencies": {
-    "@abmao/pkgs": "2.2.1-beta.15",
+    "@abmao/pkgs": "2.2.1",
     "@antfu/eslint-config-ts": "^0.43.1",
     "@commitlint/cli": "^16.2.1",
     "@commitlint/config-conventional": "^16.2.1",
@@ -38,6 +44,8 @@
     "@typescript-eslint/parser": "^5.59.7",
     "@vitest/coverage-c8": "^0.26.3",
     "colors": "^1.4.0",
+    "commitizen": "^4.3.0",
+    "cz-conventional-changelog": "^3.3.0",
     "eslint": "^8.41.0",
     "esno": "^0.16.3",
     "husky": "^7.0.4",
