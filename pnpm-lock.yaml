@@ -5,8 +5,8 @@ importers:
   .:
     devDependencies:
       '@abmao/pkgs':
-        specifier: 2.2.3
-        version: 2.2.3(esbuild@0.19.4)
+        specifier: ^2.2.8
+        version: 2.2.8(esbuild@0.19.4)
       '@antfu/eslint-config-ts':
         specifier: ^0.43.1
         version: 0.43.1(eslint@8.41.0)(typescript@5.0.4)
@@ -94,8 +94,8 @@ packages:
       glob: 10.3.10
     dev: true
 
-  /@abmao/pkgs@2.2.3(esbuild@0.19.4):
-    resolution: {integrity: sha512-wUL6dG/2Nrm8B5O2IyxOq5MhJD8S3l4BlCVng7nxrb8n0ahzvIpJd0NFNeDFiGcp+yfLGzeKhL3GU1/+Uecs7w==}
+  /@abmao/pkgs@2.2.8(esbuild@0.19.4):
+    resolution: {integrity: sha512-WzhMx7mMtaKtLhxNkxvxkvePsdqHv80Sb2hvIo951lklBWCL3pDg4AZa6LKD60QWogPN8Je2SiOEep0HWhfVVw==}
     hasBin: true
     dependencies:
       '@abmao/bump': 0.0.1
