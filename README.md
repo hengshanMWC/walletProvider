@@ -1,12 +1,14 @@
 # introduce
 
-@abmao/pkgs + pnpm = Monorepo，Support the following functions :package:
+@abmao/pkgs + pnpm = Monorepo，Support the following functions
 - [x] [@abmao/pkgs](https://github.com/hengshanMWC/pkgs) 🗂️
 - [x] build: webpack5 📦
-- [x] test: vitest 🔬
 - [x] typescript 👽
+- [x] test: vitest 🔬
+- [x] docs: vitepress 🧪
 - [x] eslint、husky 🔦
 - [x] commit: commitizen 📤
+
 
 # init
 
