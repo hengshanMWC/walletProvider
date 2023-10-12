@@ -3,9 +3,6 @@
   "private": true,
   "packageManager": "pnpm@8.5.1",
   "author": "mawencan",
-  "workspaces": [
-    "packages/*"
-  ],
   "license": "MIT",
   "homepage": "https://github.com/hengshanMWC/monorepo-template#readme",
   "repository": {
