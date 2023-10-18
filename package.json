@@ -25,8 +25,8 @@
     "test": "pkgs run test",
     "test:cov": "pkgs run test:cov",
     "lint-staged": "lint-staged",
-    "lint": "eslint --ext=js,ts,json,md,tsx .",
-    "lint:fix": "eslint --fix --ext=js,ts,json,md,tsx .",
+    "format": "eslint --fix \"scripts/**/*.{js,cjs,mjs,ts}\" --ignore-path .gitignore",
+    "format:all": "pnpm format & pkgs run format",
     "docs:dev": "vitepress dev docs",
     "docs:build": "vitepress build docs",
     "docs:serve": "vitepress serve docs",
@@ -38,7 +38,6 @@
     "@commitlint/cli": "^16.2.1",
     "@commitlint/config-conventional": "^16.2.1",
     "@types/node": "^18.11.18",
-    "@typescript-eslint/parser": "^5.59.7",
     "@vitest/coverage-c8": "^0.26.3",
     "colors": "^1.4.0",
     "commitizen": "^4.3.0",
@@ -57,6 +56,6 @@
     "webpack-cli": "^5.1.1"
   },
   "lint-staged": {
-    "**/*.{js,jsx,tsx,ts,less,md,json}": "npm run lint:fix"
+    "**/*.{js,cjs,mjs,ts}": "pnpm format:all"
   }
 }

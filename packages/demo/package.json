@@ -16,6 +16,7 @@
   "types": "dist/index.d.ts",
   "scripts": {
     "build": "webpack --config webpack.config.js",
+    "format": "eslint --fix \"{src,test}/**/*.{js,cjs,mjs,ts}\"",
     "test": "vitest",
     "test:cov": "vitest --coverage"
   }
