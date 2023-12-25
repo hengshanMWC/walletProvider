@@ -1,6 +1,6 @@
 {
   "name": "@abmao/stylelint-config-vue",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "stylelint-config-vue",
   "author": "mawencan",
   "license": "MIT",
