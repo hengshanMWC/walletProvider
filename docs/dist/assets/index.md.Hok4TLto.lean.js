@@ -1,1 +1,0 @@
-import{_ as e,c as r,o as a,a1 as t}from"./chunks/framework.BJa8dNBd.js";const m=JSON.parse('{"title":"简介","description":"","frontmatter":{},"headers":[],"relativePath":"index.md","filePath":"index.md"}'),o={name:"index.md"},i=t("",5),n=[i];function s(_,d,l,p,c,h){return a(),r("div",null,n)}const u=e(o,[["render",s]]);export{m as __pageData,u as default};
