@@ -7,3 +7,4 @@ coverage
 .idea
 typings
 docs/.vitepress/cache
+!docs/dist

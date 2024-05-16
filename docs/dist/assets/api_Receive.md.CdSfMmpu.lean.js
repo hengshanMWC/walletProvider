@@ -1,0 +1,1 @@
+import{_ as s,c as i,o as a,a1 as t}from"./chunks/framework.BJa8dNBd.js";const E=JSON.parse('{"title":"Receive","description":"","frontmatter":{},"headers":[],"relativePath":"api/Receive.md","filePath":"api/Receive.md"}'),e={name:"api/Receive.md"},h=t("",76),l=[h];function n(p,k,r,d,g,o){return a(),i("div",null,l)}const y=s(e,[["render",n]]);export{E as __pageData,y as default};
