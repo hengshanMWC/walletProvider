@@ -1,10 +1,10 @@
 # Receive
 ## 简介
-用于接收与操作 `provider`
+关于 `provider` 的接收与操作
 
 ## Api
 ### init
-初始化 `eip6963` 用来获取 `provider
+初始化 `eip6963` 用来获取 `provider`
 #### 类型
 ```ts
 type init = (fn?: Config['handleChangeWallet']) => void
@@ -152,22 +152,6 @@ type getConfig = () => Config
 import { getConfig } from '@/js/walletProvider'
 
 const config = getConfig()
-```
-
-### setConfig
-修改配置
-#### 类型
-```ts
-type setConfig = (config: Partial<Config>) => Config
-```
-#### 使用
-
-```js
-import { setConfig } from '@/js/walletProvider'
-
-setConfig({
-  debug: true
-})
 ```
 
 ### setConfig
