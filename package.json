@@ -4,13 +4,13 @@
   "packageManager": "pnpm@8.5.1",
   "author": "mawencan",
   "license": "MIT",
-  "homepage": "https://github.com/hengshanMWC/stylelint-config#readme",
+  "homepage": "https://github.com/hengshanMWC/walletProvider#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/hengshanMWC/stylelint-config.git"
+    "url": "git+https://github.com/hengshanMWC/walletProvider.git"
   },
   "bugs": {
-    "url": "https://github.com/hengshanMWC/stylelint-config/issues"
+    "url": "https://github.com/hengshanMWC/walletProvider/issues"
   },
   "config": {
     "commitizen": {
@@ -23,7 +23,10 @@
     "lint-staged": "lint-staged",
     "format": "eslint --fix \"scripts/**/*.{js,cjs,mjs,ts}\" --ignore-path .gitignore",
     "format:all": "pnpm format & pkgs run format",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:serve": "vitepress serve docs"
   },
   "devDependencies": {
     "@abmao/pkgs": "latest",
@@ -42,6 +45,7 @@
     "stylelint": "^16.0.2",
     "ts-loader": "^9.4.3",
     "typescript": "^5.0.4",
+    "vitepress": "^1.1.4",
     "vitest": "^0.34.6"
   },
   "lint-staged": {
