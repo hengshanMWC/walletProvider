@@ -3,6 +3,7 @@
 ## 示例
 ```js
 import { createWalletClient, custom } from 'viem'
+import { mainnet } from 'viem/chains'
 import { getCurrentProvider, getWallet, init, setConfig, setCurrentWallet } from '@/js/walletProvider'
 
 setConfig({
@@ -41,6 +42,6 @@ const walletClient = createWalletClient({
   transport: custom(getCurrentProvider()),
 })
 
-walletClient.getAccount()
+walletClient.getAddresses()
   .then(account => console.log(account))
 ```

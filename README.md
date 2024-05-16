@@ -1,0 +1,1 @@
+[docs](https://hengshanmwc.github.io/walletProvider/docs/dist/)
