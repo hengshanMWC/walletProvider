@@ -1,5 +1,5 @@
 # 简介
-代理 `provider` 实现与 `iframe` 等场景通讯
+代理 `provider` 实现与 `iframe` 等场景通信
 
 ## 必备知识点
 使用之前请熟知如下协议
