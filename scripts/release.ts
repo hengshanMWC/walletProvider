@@ -1,9 +1,9 @@
-import colors from 'colors'
-import { commandPublish, commandVersion } from '@abmao/pkgs'
+import colors from "colors";
+import { commandPublish, commandVersion } from "@abmao/pkgs";
 
-console.log(`${colors.cyan.bold('release: start')} 🏗`);
+console.log(`${colors.cyan.bold("release: start")} 🏗`);
 (async function () {
-  await commandVersion()
-  await commandPublish()
-})()
-console.log(`${colors.cyan.bold('release: success')} 🎉🎉🎉🎉🎊`)
+  await commandVersion();
+  await commandPublish();
+})();
+console.log(`${colors.cyan.bold("release: success")} 🎉🎉🎉🎉🎊`);
