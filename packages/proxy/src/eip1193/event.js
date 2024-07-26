@@ -1,5 +1,5 @@
-import { getConfig } from "../config";
-import { getProvider, prefix } from "../wallet";
+import { getConfig } from '../config'
+import { getProvider, prefix } from '../wallet'
 import {
   prefixProviderEventList,
   providerEventAccountsChanged,
@@ -7,7 +7,7 @@ import {
   providerEventConnect,
   providerEventDisconnect,
   providerEventMessage,
-} from "./name";
+} from './name'
 
 export const eventFnList = {
   [providerEventConnect]: {
@@ -25,26 +25,26 @@ export const eventFnList = {
   [providerEventMessage]: {
     // name: [fn]
   },
-};
+}
 export function executeEventFn(name, { info, data }) {
-  const nameList = eventFnList[name];
+  const nameList = eventFnList[name]
   if (getConfig().debug) {
-    console.log(`${prefix}executeEventFn`, name, info, data, nameList);
+    console.log(`${prefix}executeEventFn`, name, info, data, nameList)
   }
   if (nameList) {
-    const list = nameList[info.name];
+    const list = nameList[info.name]
     if (list) {
-      list.forEach((fn) => {
-        const provider = getProvider(info.name);
-        fn.call(provider, data);
-      });
+      list.forEach(fn => {
+        const provider = getProvider(info.name)
+        fn.call(provider, data)
+      })
     }
   }
 }
 
 export function onProviderEvent({ type, data }) {
   if (prefixProviderEventList.includes(type)) {
-    executeEventFn(type.replace(prefix, ""), data);
-    return true;
+    executeEventFn(type.replace(prefix, ''), data)
+    return true
   }
 }

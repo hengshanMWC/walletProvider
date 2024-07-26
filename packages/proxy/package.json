@@ -1,9 +1,9 @@
 {
-  "name": "wpp-",
-  "version": "0.0.2",
+  "name": "@abmao/wallet-proxy",
+  "version": "0.0.1",
+  "private": true,
   "packageManager": "pnpm@8.5.1",
   "access": "public",
-  "private": true,
   "license": "MIT",
   "homepage": "https://github.com/hengshanMWC/BOGX-monorepo#readme",
   "repository": {
@@ -20,6 +20,7 @@
     }
   },
   "main": "./dist/index.cjs",
+  "types": "./dist/index.d.ts",
   "files": [
     "dist"
   ],

@@ -49,7 +49,7 @@
     "husky": "^7.0.4",
     "lint-staged": "^12.5.0",
     "ts-loader": "^9.5.1",
-    "typescript": "^5.4.5",
+    "typescript": "~5.1.0",
     "unbuild": "^2.0.0",
     "vitepress": "^1.2.0",
     "vitest": "^0.34.6"

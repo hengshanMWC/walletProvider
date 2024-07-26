@@ -1,18 +1,18 @@
 let config = {
   debug: false,
-  targetOrigin: "*",
+  targetOrigin: '*',
   getTargetPostMessage() {
-    return window.parent;
+    return window.parent
   },
   handleChangeWallet: null,
-};
+}
 
 export function getConfig() {
-  return config;
+  return config
 }
 export function setConfig(c) {
   return (config = {
     ...config,
     ...c,
-  });
+  })
 }

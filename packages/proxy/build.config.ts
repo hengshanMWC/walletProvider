@@ -1,4 +1,4 @@
-import { defineBuildConfig } from "unbuild";
+import { defineBuildConfig } from 'unbuild'
 
 export default defineBuildConfig({
   rollup: {
@@ -6,4 +6,4 @@ export default defineBuildConfig({
       minify: true,
     },
   },
-});
+})
