@@ -14,11 +14,13 @@
   },
   "exports": {
     ".": {
+      "types": "./dist/index.d.ts",
       "import": "./dist/index.mjs",
       "require": "./dist/index.cjs"
     }
   },
   "main": "./dist/index.cjs",
+  "types": "./dist/index.d.ts",
   "files": [
     "dist"
   ],
@@ -27,8 +29,8 @@
     "build": "unbuild",
     "test": "vitest",
     "test:cov": "vitest --coverage",
-    "lint:prettier": "prettier --write  \"src/**/*.js\"",
-    "lint:eslint": "eslint --fix \"src/**/*.js\"",
+    "lint:prettier": "prettier --write  \"src/**/*.ts\"",
+    "lint:eslint": "eslint --fix \"src/**/*.ts\"",
     "format": "pnpm lint:prettier && pnpm lint:eslint"
   }
 }

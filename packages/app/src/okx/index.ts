@@ -1,6 +1,13 @@
 import { getHasMobile } from '../utils'
+import type { WalletInfo } from '../wallet'
 
-export class WalletOKX {
+export class WalletOKX implements WalletInfo {
+  name: string
+  dappUrl: string
+  deepLink: string
+  encodedUrl: string
+  googleLink: string
+  hasLocal: boolean
   constructor() {
     this.name = 'okx'
 
