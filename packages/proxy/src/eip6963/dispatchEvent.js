@@ -5,11 +5,14 @@ export const onProviderName = 'eip6963:announceProvider'
 export const emitProviderName = 'eip6963:requestProvider'
 
 export function dispatchEventProvider() {
+  onWallet()
+  emitWallet()
+}
+export function onWallet() {
   closeDispatchEventProvider()
   window.addEventListener(onProviderName, handleDispatchEventProvider)
-  emitProvider()
 }
-export function emitProvider() {
+export function emitWallet() {
   window.dispatchEvent(new Event(emitProviderName))
 }
 export function closeDispatchEventProvider() {
