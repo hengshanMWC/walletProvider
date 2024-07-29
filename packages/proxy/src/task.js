@@ -38,9 +38,12 @@ export function executeTask(data) {
   }
   if (data.status === 'success') {
     task.resolve(data.data)
+    getConfig()?.onSuccess(data.data)
   } else {
     task.reject(data.data)
+    getConfig()?.onError(data.data)
   }
+  getConfig()?.onComplete(data.data)
 }
 export function idToTaskIndex(id) {
   return taskList.findIndex(task => task.id === id)

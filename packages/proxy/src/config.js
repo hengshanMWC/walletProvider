@@ -4,7 +4,10 @@ let config = {
   getTargetPostMessage() {
     return window.parent
   },
-  onChangeWallet: null,
+  onChangeWallet: null, // 收取钱包
+  onSuccess: null, // 调接口成功
+  onError: null, // 调接口失败
+  onComplete: null, // 调接口完成
 }
 
 export function getConfig() {
