@@ -1,5 +1,5 @@
 {
-  "name": "@abmao/wallet-proxy",
+  "name": "@abmao/wallet-store",
   "version": "0.0.1",
   "private": true,
   "packageManager": "pnpm@8.5.1",
