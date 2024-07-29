@@ -24,5 +24,5 @@ export function collectWallet(wallet) {
   const name = wallet.info.name
   if (nameList.includes(name)) return
   wallets.push(wallet)
-  getConfig()?.handleChangeWallet?.(wallet)
+  getConfig()?.onChangeWallet?.(wallet)
 }

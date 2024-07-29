@@ -1,13 +1,8 @@
-import { getConfig, setConfig } from './config'
+import { getConfig } from './config'
 import { prefix } from './wallet'
 import { dispatchEventProvider, postMessageProvider } from './eip6963'
 
-export function init(fn) {
-  if (fn) {
-    setConfig({
-      handleChangeWallet: fn,
-    })
-  }
+export function init() {
   dispatchEventProvider()
   postMessageProvider()
 }

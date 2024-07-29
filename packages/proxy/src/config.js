@@ -4,7 +4,7 @@ let config = {
   getTargetPostMessage() {
     return window.parent
   },
-  handleChangeWallet: null,
+  onChangeWallet: null,
 }
 
 export function getConfig() {
