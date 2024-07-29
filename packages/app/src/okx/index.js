@@ -1,33 +1,29 @@
+import { getHasMobile } from '../utils'
+
 export class WalletOKX {
-  static name = 'okx'
-  get dappUrl() {
-    return encodeURIComponent(
-      `${window.location.origin}/bind_wallet/${WalletOKX.name}`,
+  constructor() {
+    this.name = 'okx'
+
+    this.dappUrl = encodeURIComponent(
+      `${window.location.origin}/bind_wallet/${this.name}`,
     )
-  }
-
-  get deepLink() {
-    return `okx://wallet/dapp/url?dappUrl=${this.dappUrl}`
-  }
-
-  get encodedUrl() {
-    return `https://www.okx.com/download?deeplink=${encodeURIComponent(
+    this.deepLink = `okx://wallet/dapp/url?dappUrl=${this.dappUrl}`
+    this.encodedUrl = `https://www.okx.com/download?deeplink=${encodeURIComponent(
       this.deepLink,
     )}`
-  }
+    this.googleLink =
+      'https://chromewebstore.google.com/detail/okx-wallet/mcohilncbfahbmgdjkbpemcciiolgcge'
 
-  get googleLink() {
-    return 'https://chromewebstore.google.com/detail/okx-wallet/mcohilncbfahbmgdjkbpemcciiolgcge'
+    const ua = navigator.userAgent
+    this.hasLocal = /OKApp/i.test(ua)
   }
 
   detection() {
-    const ua = navigator.userAgent
-    const isIOS = /iphone|ipad|ipod|ios/i.test(ua)
-    const isAndroid = /android|XiaoMi|MiuiBrowser/i.test(ua)
-    const isMobile = isIOS || isAndroid
-    const isOKApp = /OKApp/i.test(ua)
+    return !(getHasMobile() && !this.hasLocal) || window.okxwallet
+  }
 
-    if (isMobile && !isOKApp) {
+  install() {
+    if (getHasMobile() && !this.hasLocal) {
       window.open(this.encodedUrl)
       // window.location.href = this.encodedUrl
       return false
@@ -44,5 +40,5 @@ export class WalletOKX {
 export const walletOKX = new WalletOKX()
 
 export function installOKX() {
-  return walletOKX.detection()
+  return walletOKX.install()
 }
