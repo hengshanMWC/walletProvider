@@ -33,19 +33,19 @@ export class WalletOKX implements WalletInfo {
     if (getHasMobile() && !this.hasLocal) {
       window.open(this.encodedUrl)
       // window.location.href = this.encodedUrl
-      return false
     } else if (!window.okxwallet) {
       window.open(this.googleLink)
       // window.location.href = this.googleLink
-      return false
-    } else {
-      return true
     }
   }
 }
 
 export const walletOKX = new WalletOKX()
 
-export function installOKX() {
-  return walletOKX.install()
+export function hasInstallOKX() {
+  const detection = walletOKX.detection()
+  if (!detection) {
+    walletOKX.install()
+  }
+  return detection
 }

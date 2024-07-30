@@ -56,5 +56,8 @@
   },
   "lint-staged": {
     "**/*.{js,cjs,mjs,ts}": "pnpm format:all"
+  },
+  "dependencies": {
+    "mipd": "^0.0.7"
   }
 }
