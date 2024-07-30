@@ -3,7 +3,6 @@ import type { WalletInfo } from '../wallet'
 
 export class WalletOKX implements WalletInfo {
   readonly name: string
-  readonly hasLocal: boolean
   encodedUrl: string
   googleLink: string
   constructor() {
@@ -18,13 +17,10 @@ export class WalletOKX implements WalletInfo {
     )}`
     this.googleLink =
       'https://chromewebstore.google.com/detail/okx-wallet/mcohilncbfahbmgdjkbpemcciiolgcge'
-
-    const ua = navigator.userAgent
-    this.hasLocal = /OKApp/i.test(ua)
   }
 
   detection() {
-    return !(getHasMobile() && !this.hasLocal) || window.okxwallet
+    return window.okxwallet
   }
 
   install() {
