@@ -10,8 +10,8 @@ export default defineBuildConfig({
     dts: {
       respectExternal: true,
     },
-    esbuild: {
-      minify: true,
-    },
+    // esbuild: {
+    //   minify: true,
+    // },
   },
 })
