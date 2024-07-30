@@ -2,21 +2,19 @@ import { getHasMobile } from '../utils'
 import type { WalletInfo } from '../wallet'
 
 export class WalletOKX implements WalletInfo {
-  name: string
-  dappUrl: string
-  deepLink: string
+  readonly name: string
+  readonly hasLocal: boolean
   encodedUrl: string
   googleLink: string
-  hasLocal: boolean
   constructor() {
     this.name = 'okx'
 
-    this.dappUrl = encodeURIComponent(
+    const dappUrl = encodeURIComponent(
       `${window.location.origin}/bind_wallet/${this.name}`,
     )
-    this.deepLink = `okx://wallet/dapp/url?dappUrl=${this.dappUrl}`
+    const deepLink = `okx://wallet/dapp/url?dappUrl=${dappUrl}`
     this.encodedUrl = `https://www.okx.com/download?deeplink=${encodeURIComponent(
-      this.deepLink,
+      deepLink,
     )}`
     this.googleLink =
       'https://chromewebstore.google.com/detail/okx-wallet/mcohilncbfahbmgdjkbpemcciiolgcge'
@@ -30,10 +28,10 @@ export class WalletOKX implements WalletInfo {
   }
 
   install() {
-    if (getHasMobile() && !this.hasLocal) {
+    if (getHasMobile()) {
       window.open(this.encodedUrl)
       // window.location.href = this.encodedUrl
-    } else if (!window.okxwallet) {
+    } else {
       window.open(this.googleLink)
       // window.location.href = this.googleLink
     }
@@ -41,11 +39,10 @@ export class WalletOKX implements WalletInfo {
 }
 
 export const walletOKX = new WalletOKX()
-
 export function hasInstallOKX() {
-  const detection = walletOKX.detection()
-  if (!detection) {
+  const hasInstall = !walletOKX.detection()
+  if (hasInstall) {
     walletOKX.install()
   }
-  return detection
+  return hasInstall
 }

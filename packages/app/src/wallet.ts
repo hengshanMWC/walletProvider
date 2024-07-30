@@ -1,6 +1,6 @@
 export interface WalletInfo {
-  name: string
-  hasLocal: boolean
+  readonly name: string
+  readonly hasLocal: boolean
   detection: () => boolean
   install: () => void
 }
